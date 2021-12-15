@@ -6,7 +6,7 @@
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
    
     
@@ -29,9 +29,6 @@
 </head>
 
 <body>
-    
-
-
     
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w880">
@@ -60,6 +57,7 @@
                     <hr>
                   
                     <form method="POST">
+                        {% csrf_token %}
                        
                             
                                 <div class="input-group">
@@ -93,7 +91,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Employer's Name</label>
-                                    <input class="input--style-4" type="text" name="Employer's_Name">
+                                    <input class="input--style-4" type="text" name="employers_name">
                                 </div>
                             </div>
                         
@@ -105,7 +103,7 @@
                                 <div class="input-group">
                                     <label class="label">Employer's Enrolment Number</label>
                                     
-                                    <input class="input--style-4" type="text" name="Employer's_Enrolment_Number">
+                                    <input class="input--style-4" type="text" name="enrolment_no">
                                     
                                 </div>
                             </div>
@@ -115,7 +113,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Employer's Address</label>
-                                    <input class="input--style-4" type="text" name="Employer's_Address">
+                                    <input class="input--style-4" type="text" name="employer_address">
                                 </div>
                             </div>
                            
@@ -124,7 +122,7 @@
                                 <div class="input-group">
                                     <label class="label">Branch/Site/Location</label>
                                     
-                                    <input class="input--style-4" type="text" name="Branch/_Site/_Location">
+                                    <input class="input--style-4" type="text" name="branch">
                                     
                                 </div>
                             </div>
@@ -135,7 +133,7 @@
                                 <div class="input-group">
                                     <label class="label">Date of entry</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="Date_of_entry">
+                                        <input class="input--style-4 js-datepicker" type="text" name="entry_date">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -145,11 +143,11 @@
                                     <label class="label">Gender</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" checked="checked" name="employee_gender">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Female
-                                            <input type="radio" name="gender">
+                                            <input type="radio" name="employee_gender">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -170,35 +168,35 @@
                                  
                                   
                                   <label>Mr.</label>
-                                  <input type="checkbox" >
+                                  <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline">
                                     <label>Miss</label>
-                                    <input type="checkbox" >
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline">
                                     <label>Ms.</label>
-                                    <input type="checkbox" >
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline">
                                     <label>Mrs.</label>
-                                    <input type="checkbox" >
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline">
                                     <label>Dr.</label>
-                                    <input type="checkbox" >
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline">
                                     <label>Prof.</label>
-                                    <input type="checkbox" >
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline" >
                                     <label>Hon.</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 <div class="inline" >
                                     <label>Rev.</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="member_title">
                                 </div>
                                 
                             </fieldset>
@@ -207,26 +205,26 @@
                         <div>
                             <div class="input-group">
                                 <label class="label">Surname</label>
-                                <input class="input--style-4" type="text" name="Surname">
+                                <input class="input--style-4" type="text" name="surname">
                             </div>
                         </div>  
                         <div>
                             <div class="input-group">
                                 <label class="label">First Name</label>
-                                <input class="input--style-4" type="text" name="First_Name">
+                                <input class="input--style-4" type="text" name="firstname">
                             </div>
                         </div>  
                         <div>
                             <div class="input-group">
                                 <label class="label">Other Names </label>
-                                <input class="input--style-4" type="text" name="Other_Names">
+                                <input class="input--style-4" type="text" name="othername">
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Identification Number</label>
-                                    <input class="input--style-4" type="text" name="Identification_Number">
+                                    <input class="input--style-4" type="text" name="idnumber">
                                 </div>
                             </div>
                         
@@ -238,26 +236,26 @@
                                 <label class="label">Type of Identification</label>
                                 <div class="inline">
                                     <label>Passport Card</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="idtype">
                                 </div>
                                 <div class="inline">
                                     <label>Driver's License</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="idtype">
                                 </div>
                                 <div class="inline">
                                     <label>Voter's Identification</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="idtype">
                                 </div>
                                 <div class="inline">
                                     <label>National ID</label>
-                                    <input type="checkbox">
+                                    <input type="checkbox" name="idtype">
                                 </div>
                             </div>
                         </div> 
                         <div>
                             <div class="input-group">
                                 <label class="label">Marital Status</label>
-                                <input class="input--style-4" type="text" name="Marital_Status">
+                                <input class="input--style-4" type="text" name="marital_Status">
                             </div>
                         </div>  
 
@@ -282,7 +280,7 @@
                                 <div class="input-group">
                                     <label class="label">Date of Birth</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="Date_of_birth">
+                                        <input class="input--style-4 js-datepicker" type="text" name="date_of_birth">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -293,22 +291,22 @@
                         <div class="col-3">
                                 <div class="input-group">
                                     <label class="label">Age</label>
-                                    <input class="input--style-4" type="text" name="Age">
+                                    <input class="input--style-4" type="text" name="age">
                                 </div>
                         </div>
                         <div class="col-3">
                             <div class="input-group">
                                 <label class="label">Place of Birth</label>
                                 
-                                <input class="input--style-4" type="text" name="Place_of_Birth">
+                                <input class="input--style-4" type="text" name="placeofbirth">
                                 
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="input-group">
                                 <label class="label">Region</label>
-                                <label for="dog-names">Select a region:</label>
-                                <select name="dog-names" id="dog-names">
+                                <label for="region">Select a region:</label>
+                                <select name="region" id="dog-names">
                                   <option value="Choose">Choose</option>
                                   <option value="Greater_Accra">Greater Accra</option>
                                   <option value="Central">Central</option>
@@ -337,7 +335,7 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Town</label>
-                                <input class="input--style-4" type="text" name="Town">
+                                <input class="input--style-4" type="text" name="town">
                             </div>
                         </div>
                        
@@ -346,7 +344,7 @@
                             <div class="input-group">
                                 <label class="label">District</label>
                                 
-                                <input class="input--style-4" type="text" name="District">
+                                <input class="input--style-4" type="text" name="district">
                                 
                             </div>
                         </div>
@@ -355,7 +353,7 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Residential Address</label>
-                                <input class="input--style-4" type="text" name="Town">
+                                <input class="input--style-4" type="text" name="residential_address">
                             </div>
                         </div>
                        
@@ -364,7 +362,7 @@
                             <div class="input-group">
                                 <label class="label">Postal Address</label>
                                 
-                                <input class="input--style-4" type="text" name="District">
+                                <input class="input--style-4" type="text" name="postal_address">
                                 
                             </div>
                         </div>
@@ -382,7 +380,7 @@
                             <div class="input-group">
                                 <label class="label">Cell</label>
                                 
-                                <input class="input--style-4" type="text" name="Cell">
+                                <input class="input--style-4" type="text" name="telephone_number">
                                 
                             </div>
                         </div>
@@ -390,7 +388,7 @@
                             <div class="input-group">
                                 <label class="label">Work</label>
                                 
-                                <input class="input--style-4" type="text" name="Work">
+                                <input class="input--style-4" type="text" name="work_number">
                                 
                             </div>
                         </div>
@@ -400,18 +398,18 @@
                         <div class="col-2">
                             <div class="input-group">
                                 <label class="label">Employer's Address</label>
-                                <input class="input--style-4" type="text" name="Employer's_Address">
+                                <input class="input--style-4" type="text" name="employer_address1">
                             </div>
                         </div>
                         <div class="input-group">
                             <label class="label">Gender of Employer</label>
                             <div class="p-t-10">
                                 <label class="radio-container m-r-45">Male
-                                    <input type="radio" checked="checked" name="gender">
+                                    <input type="radio" checked="checked" name="employer_gender">
                                     <span class="checkmark"></span>
                                 </label>
                                 <label class="radio-container">Female
-                                    <input type="radio" name="gender">
+                                    <input type="radio" name="employer_gender">
                                     <span class="checkmark"></span>
                                 </label>
                             </div>
@@ -422,7 +420,7 @@
                         <div class="input-group">
                             <label class="label">Father's Name</label>
                             
-                            <input class="input--style-4" type="text" name="Father's_Name">
+                            <input class="input--style-4" type="text" name="fathers_name">
                             
                         </div>
                     
@@ -430,7 +428,7 @@
                         <div class="input-group">
                             <label class="label">Father's Address</label>
                             
-                            <input class="input--style-4" type="text" name="Father's_Address">
+                            <input class="input--style-4" type="text" name="fathers_adress">
                             
                         </div>
                     
@@ -438,7 +436,7 @@
                         <div class="input-group">
                             <label class="label">Mother's Name</label>
                             
-                            <input class="input--style-4" type="text" name="Mother's_Name">
+                            <input class="input--style-4" type="text" name="mothers_name">
                             
                         </div>
                     
@@ -446,21 +444,21 @@
                         <div class="input-group">
                             <label class="label">Mother's Address</label>
                             
-                            <input class="input--style-4" type="text" name="Mother's_Address">
+                            <input class="input--style-4" type="text" name="mothers_address">
                         </div>   
                         
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">SSNIT Number</label>
-                                    <input class="input--style-4" type="text" name="SSNIT_Number">
+                                    <input class="input--style-4" type="text" name="ssnit_number">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Date of entry</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="Date_of_entry">
+                                        <input class="input--style-4 js-datepicker" type="text" name="date_of_entry">
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -472,7 +470,7 @@
                         <hr>
                         <div class="input-group">
                             <label class="label">To the Corporate Trustees/Trustees of</label>
-                            <input class="input--style-4" type="text" name="Scheme_Name">
+                            <input class="input--style-4" type="text" name="trustee_title">
                         </div>
                         <div>
                             <p style="align-items: center;">Full name of Scheme in BLOCK CAPITALS</p>
@@ -484,7 +482,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">NAME OF MEMBER (BLOCK CAPITALS):</label>
-                                    <input class="input--style-4" type="text" name="NAME_OF_MEMBER_(BLOCK_CAPITALS)_:">
+                                    <input class="input--style-4" type="text" name="member_name">
                                 </div>
                             </div>
                         
@@ -492,7 +490,7 @@
                                 <div class="input-group">
                                     <label class="label">Employee Number:</label>
                                     
-                                    <input class="input--style-4" type="text" name="Employer's_Enrolment_Number">
+                                    <input class="input--style-4" type="text" name="employee_number">
                                     
                                 </div>
                             </div>
@@ -501,7 +499,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">NAME OF EMPLOYER:</label>
-                                    <input class="input--style-4" type="text" name="NAME_OF_EMPLOYER:">
+                                    <input class="input--style-4" type="text" name="employer_name">
                                 </div>
                             </div>
                         
@@ -509,7 +507,7 @@
                                 <div class="input-group">
                                     <label class="label">Branch/Site/Plant:</label>
                                     
-                                    <input class="input--style-4" type="text" name="Branch_/Site_/Plant:">
+                                    <input class="input--style-4" type="text" name="employer_branch">
                                     
                                 </div>
                             </div>
@@ -531,168 +529,24 @@
                               
                             </tr>
                             <tr>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
+                              <td> <input class="input--style-4" type="text" name="depndant_surname"></td>
+                              <td> <input class="input--style-4" type="text" name="dependant_firstname"></td>
                               <td><label class="label"></label>
                                 <div class="p-t-10">
                                     <label class="radio-container m-r-45">Male
-                                        <input type="radio" checked="checked" name="gender">
+                                        <input type="radio" checked="checked" name="dependant_gender">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label class="radio-container">Female
-                                        <input type="radio" name="gender">
+                                        <input type="radio" name="dependant_gender">
                                         <span class="checkmark"></span></td>
                               <td> <label for="birthday"></label>
-                                <input type="date" id="birthday"</td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
+                                <input type="date" id="birthday" dependant_dob></td>
+                              <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
+                              <td> <input class="input--style-4" type="text" name="relationship"></td>
                              
                             </tr>
-                            <tr>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                              <td> <label class="label"></label>
-                                <div class="p-t-10">
-                                    <label class="radio-container m-r-45">Male
-                                        <input type="radio" checked="checked" name="gender">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                    <label class="radio-container">Female
-                                        <input type="radio" name="gender">
-                                        <span class="checkmark"></span></td>
-                              <td> <label for="birthday"></label>
-                                <input type="date" id="birthday"</td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                              <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                             
-                            </tr>
-                            <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td> <label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td><label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td> <label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td><label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td> <label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td><label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td><label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td> <label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td><label class="label"></label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="gender">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="gender">
-                                            <span class="checkmark"></span></td>
-                                <td><label for="birthday"></label>
-                                    <input type="date" id="birthday"</td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                <td> <input class="input--style-4" type="text" name="Branch_/Site_/Plant:"></td>
-                                
-                              </tr>
-                            
+        
                         </table>
                         </div>  
                         </div>  
