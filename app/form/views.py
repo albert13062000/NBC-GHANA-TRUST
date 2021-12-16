@@ -103,4 +103,4 @@ def home(request):
             relationship = relationship,
         )
 
-        return render(request, 'index.html')
+    return render(request, 'index.html', {})
