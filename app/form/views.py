@@ -1,10 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from .models import *
 
 # Create your views here.
 
-def home(request):
+def form(request):
     if request.method == "POST":
         Scheme_name =request.POST.get('Scheme_name')
         tire_name = request.POST.get('tire-name')
@@ -104,3 +104,16 @@ def home(request):
         )
 
     return render(request, 'index.html', {})
+
+def home(request):
+    if request.method=="POST":
+        ssnit_number = request.POST.get('SSNITNUMBER')
+        form = Details.objects.filter(ssnit_number=ssnit_number)
+        return render(request, 'index3.html', {'form': form})
+    else:
+        return render(request, 'index2.html')
+
+def details(request, pk):
+    if request.method=="POST":
+        form = Details.objects.filter(ssnit_number=pk)
+    return render(request, 'index3.html', {'form': form})
