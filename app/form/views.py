@@ -17,7 +17,7 @@ def form(request):
 
         member_title = request.POST.get('member_title')
         surname = request.POST.get('surname')
-        firsname = request.POST.get('firstname')
+        firstname = request.POST.get('firstname')
         othername = request.POST.get('othername')
         identification_number = request.POST.get('idnumber')
         marital_status = request.POST.get('marital_status')
@@ -48,12 +48,40 @@ def form(request):
         employer_name = request.POST.get('employer_name')
         employer_branch = request.POST.get('employer_branch')
 
-        depndant_surname = request.POST.get('depndant_surname')
+        dependant_surname = request.POST.get('depndant_surname')
         dependant_firstname = request.POST.get('dependant_firstname')
         dependant_gender = request.POST.get('dependant_gender')
         dependant_dob = request.POST.get('dependant_dob')
         percentage_benefit = request.POST.get('percentage_benefit')
         relationship = request.POST.get('relationship')
+
+        dependant_surname1 = request.POST.get('depndant_surname1')
+        dependant_firstname1 = request.POST.get('dependant_firstname1')
+        dependant_gender1 = request.POST.get('dependant_gender1')
+        dependant_dob1 = request.POST.get('dependant_dob1')
+        percentage_benefit1 = request.POST.get('percentage_benefit1')
+        relationship1 = request.POST.get('relationship1')
+
+        dependant_surname2 = request.POST.get('depndant_surname2')
+        dependant_firstname2 = request.POST.get('dependant_firstname2')
+        dependant_gender2 = request.POST.get('dependant_gender2')
+        dependant_dob2 = request.POST.get('dependant_dob2')
+        percentage_benefit2 = request.POST.get('percentage_benefit2')
+        relationship2 = request.POST.get('relationship2')
+        
+        dependant_surname3 = request.POST.get('depndant_surname3')
+        dependant_firstname3 = request.POST.get('dependant_firstname3')
+        dependant_gender3 = request.POST.get('dependant_gender3')
+        dependant_dob3 = request.POST.get('dependant_dob3')
+        percentage_benefit3 = request.POST.get('percentage_benefit3')
+        relationship3 = request.POST.get('relationship3')
+
+        dependant_surname4 = request.POST.get('depndant_surname4')
+        dependant_firstname4 = request.POST.get('dependant_firstname4')
+        dependant_gender4 = request.POST.get('dependant_gender4')
+        dependant_dob4 = request.POST.get('dependant_dob4')
+        percentage_benefit4 = request.POST.get('percentage_benefit4')
+        relationship4 = request.POST.get('relationship4')
 
         Details.objects.create(
             Scheme_name = Scheme_name,
@@ -66,7 +94,7 @@ def form(request):
             employee_gender = employee_gender,
             member_title = member_title,
             surname = surname,
-            firsname = firsname,
+            firstname = firsname,
             othername = othername,
             identification_number = identification_number,
             identification_type = identification_type,
@@ -95,12 +123,42 @@ def form(request):
             employee_number = employee_number,
             employer_branch = employer_branch,
             employer_name = employer_name,
-            depndant_surname = depndant_surname,
+
+            dependant_surname = dependant_surname,
             dependant_firstname = dependant_firstname,
             dependant_gender = dependant_gender,
             dependant_dob = dependant_dob,
             percentage_benefit = percentage_benefit,
             relationship = relationship,
+
+            dependant_surname1 = dependant_surname1,
+            dependant_firstname1 = dependant_firstname1,
+            dependant_gender1 = dependant_gender1,
+            dependant_dob1 = dependant_dob1,
+            percentage_benefit1 = percentage_benefit1,
+            relationship1 = relationship1,
+
+            dependant_surname2 = dependant_surname2,
+            dependant_firstname2 = dependant_firstname2,
+            dependant_gender2 = dependant_gender2,
+            dependant_dob2 = dependant_dob2,
+            percentage_benefit2 = percentage_benefit2,
+            relationship2 = relationship2,
+
+            dependant_surname3 = dependant_surname3,
+            dependant_firstname3 = dependant_firstname3,
+            dependant_gender3 = dependant_gender3,
+            dependant_dob3 = dependant_dob3,
+            percentage_benefit3 = percentage_benefit3,
+            relationship3 = relationship3,
+
+            dependant_surname4 = dependant_surname4,
+            dependant_firstname4 = dependant_firstname4,
+            dependant_gender4 = dependant_gender4,
+            dependant_dob4 = dependant_dob4,
+            percentage_benefit4 = percentage_benefit4,
+            relationship4 = relationship4,
+
         )
 
     return render(request, 'index.html', {})
