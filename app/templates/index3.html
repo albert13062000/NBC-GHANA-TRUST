@@ -61,7 +61,7 @@
                        
                             
                                 <div class="input-group">
-                                    <label class="label">{{form.Scheme_Name}}</label>
+                                    <label class="label">{{form.Scheme_name}}</label>
                                 </div>
                                   
                         
@@ -69,7 +69,7 @@
                         
                     <div class="input-group">
                             <label class="label">Type of Scheme</label>
-                                <label>{{form.}}</label>            
+                                <label>{{form.tire_name}}</label>            
                     </div>
                         <div class="p-t-15">
                         
@@ -78,7 +78,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Employer's Name</label>
-                                    <input class="input--style-4" type="text" name="employers_name" required>
+                                   <label>{{form.employers_name}}</label>
                                 </div>
                             </div>
                         
@@ -90,7 +90,7 @@
                                 <div class="input-group">
                                     <label class="label">Employer's Enrolment Number</label>
                                     
-                                    <input class="input--style-4" type="text" name="enrolment_no" required>
+                                  {{form.enrolment_no}}
                                     
                                 </div>
                             </div>
@@ -100,7 +100,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Employer's Address</label>
-                                    <input class="input--style-4" type="text" name="employer_address" required>
+                                   {{form.employer_address}}
                                 </div>
                             </div>
                            
@@ -109,7 +109,7 @@
                                 <div class="input-group">
                                     <label class="label">Branch/Site/Location</label>
                                     
-                                    <input class="input--style-4" type="text" name="branch" required>
+                                   {{form.branch}}
                                     
                                 </div>
                             </div>
@@ -120,7 +120,7 @@
                                 <div class="input-group">
                                     <label class="label">Date of entry</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4 js-datepicker" type="text" name="entry_date" required>
+                                       {{form.entry_date}}
                                         <i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>
                                     </div>
                                 </div>
@@ -128,16 +128,7 @@
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Gender</label>
-                                    <div class="p-t-10">
-                                        <label class="radio-container m-r-45">Male
-                                            <input type="radio" checked="checked" name="employee_gender" required>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <label class="radio-container">Female
-                                            <input type="radio" name="employee_gender" required>
-                                            <span class="checkmark"></span>
-                                        </label>
-                                    </div>
+                                   <label>{{form.employer_gender}}</label>
                                 </div>
                             </div>
                         </div>
@@ -155,63 +146,31 @@
                                  
                                   
                                   <label>Mr.</label>
-                                  <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline">
-                                    <label>Miss</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline">
-                                    <label>Ms.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline">
-                                    <label>Mrs.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline">
-                                    <label>Dr.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline">
-                                    <label>Prof.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline" >
-                                    <label>Hon.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                <div class="inline" >
-                                    <label>Rev.</label>
-                                    <input type="checkbox" name="member_title" required>
-                                </div>
-                                
-                            </fieldset>
-                            
-                        </div>
+                                 <label>{{form.member_title}}</label>
+                               
                         <div>
                             <div class="input-group">
                                 <label class="label">Surname</label>
-                                <input class="input--style-4" type="text" name="surname" required>
+                                <label>{{form.surname}}</label>
                             </div>
                         </div>  
                         <div>
                             <div class="input-group">
                                 <label class="label">First Name</label>
-                                <input class="input--style-4" type="text" name="firstname" required>
+                                <label>{{form.firstname}}</label>
                             </div>
                         </div>  
                         <div>
                             <div class="input-group">
                                 <label class="label">Other Names </label>
-                                <input class="input--style-4" type="text" name="othername" required>
+                                <label>{{form.othername}}</label>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Identification Number</label>
-                                    <input class="input--style-4" type="text" name="idnumber" required>
+                                   <label>{{form.identification_number}}</label>
                                 </div>
                             </div>
                         
@@ -528,81 +487,82 @@
                                         <input type="radio" name="dependant_gender" required>
                                         <span class="checkmark"></span></td>
                               <td> <label for="birthday"></label>
-                                <input type="date" id="birthday" dependant_dob></td>
+                                <input type="date" id="birthday" name="dependant_dob"></td>
                               <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
                               <td> <input class="input--style-4" type="text" name="relationship"></td>
                              
                             </tr>
                             <tr>
-                                <td> <input class="input--style-4" type="text" name="depndant_surname"></td>
-                                <td> <input class="input--style-4" type="text" name="dependant_firstname"></td>
+                                <td> <input class="input--style-4" type="text" name="depndant_surname1"></td>
+                                <td> <input class="input--style-4" type="text" name="dependant_firstname1"></td>
                                 <td><label class="label"></label>
                                   <div class="p-t-10">
                                       <label class="radio-container m-r-45">Male
-                                          <input type="radio" checked="checked" name="dependant_gender" required>
+                                          <input type="radio" checked="checked" name="dependant_gender1" required>
                                           <span class="checkmark"></span>
                                       </label>
                                       <label class="radio-container">Female
-                                          <input type="radio" name="dependant_gender" required>
+                                          <input type="radio" name="dependant_gender1" required>
                                           <span class="checkmark"></span></td>
                                 <td> <label for="birthday"></label>
-                                  <input type="date" id="birthday" dependant_dob></td>
-                                <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
-                                <td> <input class="input--style-4" type="text" name="relationship"></td>
+                                  <input type="date" id="birthday" name = "dependant_dob1"></td>
+                                <td> <input class="input--style-4" type="text" name="percentage_benefit1"></td>
+                                <td> <input class="input--style-4" type="text" name="relationship1"></td>
+                               
+                              </tr>
+
+                              <tr>
+                                <td> <input class="input--style-4" type="text" name="depndant_surname2"></td>
+                                <td> <input class="input--style-4" type="text" name="dependant_firstname2"></td>
+                                <td><label class="label"></label>
+                                  <div class="p-t-10">
+                                      <label class="radio-container m-r-45">Male
+                                          <input type="radio" checked="checked" name="dependant_gender2" required>
+                                          <span class="checkmark"></span>
+                                      </label>
+                                      <label class="radio-container">Female
+                                          <input type="radio" name="dependant_gender2" required>
+                                          <span class="checkmark"></span></td>
+                                <td> <label for="birthday"></label>
+                                  <input type="date" id="birthday" name = "dependant_dob2"></td>
+                                <td> <input class="input--style-4" type="text" name="percentage_benefit2"></td>
+                                <td> <input class="input--style-4" type="text" name="relationship2"></td>
                                
                               </tr>
                               <tr>
-                                <td> <input class="input--style-4" type="text" name="depndant_surname"></td>
-                                <td> <input class="input--style-4" type="text" name="dependant_firstname"></td>
+                                <td> <input class="input--style-4" type="text" name="depndant_surname3"></td>
+                                <td> <input class="input--style-4" type="text" name="dependant_firstname3"></td>
                                 <td><label class="label"></label>
                                   <div class="p-t-10">
                                       <label class="radio-container m-r-45">Male
-                                          <input type="radio" checked="checked" name="dependant_gender" required>
+                                          <input type="radio" checked="checked" name="dependant_gender3" required>
                                           <span class="checkmark"></span>
                                       </label>
                                       <label class="radio-container">Female
-                                          <input type="radio" name="dependant_gender" required>
+                                          <input type="radio" name="dependant_gender3" required>
                                           <span class="checkmark"></span></td>
                                 <td> <label for="birthday"></label>
-                                  <input type="date" id="birthday" dependant_dob></td>
-                                <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
-                                <td> <input class="input--style-4" type="text" name="relationship"></td>
+                                  <input type="date" id="birthday" name="dependant_dob3"></td>
+                                <td> <input class="input--style-4" type="text" name="percentage_benefit3"></td>
+                                <td> <input class="input--style-4" type="text" name="relationship3"></td>
                                
                               </tr>
                               <tr>
-                                <td> <input class="input--style-4" type="text" name="depndant_surname"></td>
-                                <td> <input class="input--style-4" type="text" name="dependant_firstname"></td>
+                                <td> <input class="input--style-4" type="text" name="depndant_surname4"></td>
+                                <td> <input class="input--style-4" type="text" name="dependant_firstname4"></td>
                                 <td><label class="label"></label>
                                   <div class="p-t-10">
                                       <label class="radio-container m-r-45">Male
-                                          <input type="radio" checked="checked" name="dependant_gender" required>
+                                          <input type="radio" checked="checked" name="dependant_gender4" required>
                                           <span class="checkmark"></span>
                                       </label>
                                       <label class="radio-container">Female
-                                          <input type="radio" name="dependant_gender" required>
+                                          <input type="radio" name="dependant_gender4" required>
                                           <span class="checkmark"></span></td>
                                 <td> <label for="birthday"></label>
-                                  <input type="date" id="birthday" dependant_dob></td>
-                                <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
-                                <td> <input class="input--style-4" type="text" name="relationship"></td>
-                               
-                              </tr>
-                              <tr>
-                                <td> <input class="input--style-4" type="text" name="depndant_surname"></td>
-                                <td> <input class="input--style-4" type="text" name="dependant_firstname"></td>
-                                <td><label class="label"></label>
-                                  <div class="p-t-10">
-                                      <label class="radio-container m-r-45">Male
-                                          <input type="radio" checked="checked" name="dependant_gender" required>
-                                          <span class="checkmark"></span>
-                                      </label>
-                                      <label class="radio-container">Female
-                                          <input type="radio" name="dependant_gender" required>
-                                          <span class="checkmark"></span></td>
-                                <td> <label for="birthday"></label>
-                                  <input type="date" id="birthday" dependant_dob></td>
-                                <td> <input class="input--style-4" type="text" name="percentage_benefit"></td>
-                                <td> <input class="input--style-4" type="text" name="relationship"></td>
+                                  <input type="date" id="birthday" name="dependant_dob4"></td>
+                                <td> <input class="input--style-4" type="text" name="percentage_benefit4"></td>
+                                <td> <input class="input--style-4" type="text" name="relationship4"></td>
                                
                               </tr>
                               
